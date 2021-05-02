@@ -1,8 +1,8 @@
 We bring you another container release featuring:
 
- * Regular and timely application updates
- * Easy user mappings (PGID, PUID)
- * Custom base image with s6 overlay
+* Regular and timely application updates
+* Easy user mappings (PGID, PUID)
+* Custom base image with s6 overlay
 
 # [thespad/matomo](https://github.com/thespad/docker-matomo)
 
@@ -30,6 +30,14 @@ The architectures supported by this image are:
 | x86-64 | latest |
 | arm64 | latest |
 | armhf | latest |
+
+## Application Setup
+
+Webui is accessible at http://SERVERIP:PORT
+
+[Enable Redis support](https://matomo.org/faq/how-to/faq_20511/)
+
+More info at [matomo](https://github.com/matomo-org/matomo/).
 
 ## Usage
 
@@ -59,7 +67,7 @@ services:
 
 ### docker cli
 
-```
+```shell
 docker run -d \
   --name=matomo \
   -e PUID=1000 \
@@ -89,7 +97,7 @@ You can set any environment variable from a file by using a special prepend `FIL
 
 As an example:
 
-```
+```shell
 -e FILE__PASSWORD=/run/secrets/mysecretpassword
 ```
 
@@ -108,21 +116,10 @@ Ensure any volume directories on the host are owned by the same user you specify
 
 In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as below:
 
-```
+```shell
   $ id username
     uid=1000(dockeruser) gid=1000(dockergroup) groups=1000(dockergroup)
 ```
-
-
-&nbsp;
-## Application Setup
-
-Webui is accessible at http://SERVERIP:PORT
-
-[Enable Redis support](https://matomo.org/faq/how-to/faq_20511/)
-
-More info at [matomo](https://github.com/matomo-org/matomo/).
-
 
 ## Support Info
 
@@ -140,6 +137,7 @@ Most of our images are static, versioned, and require an image update and contai
 Below are the instructions for updating containers:
 
 ### Via Docker Compose
+
 * Update all images: `docker-compose pull`
   * or update a single image: `docker-compose pull matomo`
 * Let compose update all containers as necessary: `docker-compose up -d`
@@ -147,6 +145,7 @@ Below are the instructions for updating containers:
 * You can also remove the old dangling images: `docker image prune`
 
 ### Via Docker Run
+
 * Update the image: `docker pull ghcr.io/thespad/matomo`
 * Stop the running container: `docker stop matomo`
 * Delete the container: `docker rm matomo`
@@ -154,24 +153,29 @@ Below are the instructions for updating containers:
 * You can also remove the old dangling images: `docker image prune`
 
 ### Via Watchtower auto-updater (only use if you don't remember the original parameters)
+
 * Pull the latest image at its tag and replace it with the same env variables in one run:
-  ```
+
+  ```shell
   docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
   containrrr/watchtower \
   --run-once matomo
   ```
+
 * You can also remove the old dangling images: `docker image prune`
 
 **Note:** We do not endorse the use of Watchtower as a solution to automated updates of existing Docker containers. In fact we generally discourage automated updates. However, this is a useful tool for one-time manual updates of containers where you have forgotten the original parameters. In the long term, we highly recommend using [Docker Compose](https://docs.linuxserver.io/general/docker-compose).
 
 ### Image Update Notifications - Diun (Docker Image Update Notifier)
+
 * We recommend [Diun](https://crazymax.dev/diun/) for update notifications. Other tools that automatically update containers unattended are not recommended or supported.
 
 ## Building locally
 
 If you want to make local modifications to these images for development purposes or just to customize the logic:
-```
+
+```shell
 git clone https://github.com/thespad/docker-matomo.git
 cd docker-matomo
 docker build \
@@ -181,7 +185,8 @@ docker build \
 ```
 
 The ARM variants can be built on x86_64 hardware using `multiarch/qemu-user-static`
-```
+
+```shell
 docker run --rm --privileged multiarch/qemu-user-static:register --reset
 ```
 
@@ -189,4 +194,4 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
-* **15.04.21:** - Initial Release.
+* **02.05.21:** - Initial Release.
