@@ -26,5 +26,6 @@ done
 shopt -u globstar dotglob
 
 chown -R abc:abc \
-    /app \
     /config
+
+find /app | xargs -P $(nproc) -I {} chown abc:abc {}
