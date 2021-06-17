@@ -5,6 +5,9 @@ on:
     tags: 
       - 'v*'
       - 'update-base'
+  pull_request:
+    branches:
+      - 'main'      
 
 env:
   DOCKERHUB_SLUG: thespad/matomo
@@ -25,6 +28,9 @@ jobs:
           images: |
             ${{ env.DOCKERHUB_SLUG }}
             ${{ env.GHCR_SLUG }}
+          tags: |
+            type=semver,pattern={{version}}
+            type=ref,event=pr            
           labels: |
             org.opencontainers.image.title=matomo
             org.opencontainers.image.description=matomo
