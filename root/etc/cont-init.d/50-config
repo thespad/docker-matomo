@@ -5,7 +5,7 @@ if ! grep -q 'config-v1' /config/nginx/site-confs/default; then
 fi
 
 if ! grep -q 'core:archive' /etc/crontabs/abc; then
-    printf "  *     1       *       *       *       /usr/bin/php /app/matomo/console core:archive --url=${SITEURL} > /config/log/matomo/matomo-archive.log 2> /config/log/matomo/matomo-archive-errors.log" >> /etc/crontabs/abc
+    printf "  *     1       *       *       *       /usr/bin/php /app/matomo/console core:archive --url=%s > /config/log/matomo/matomo-archive.log 2> /config/log/matomo/matomo-archive-errors.log" "${SITEURL}" >> /etc/crontabs/abc
     mkdir -p /config/log/matomo
 fi
 
@@ -28,4 +28,4 @@ shopt -u globstar dotglob
 chown -R abc:abc \
     /config
 
-find /app | xargs -P $(nproc) -I {} chown abc:abc {}
+find /app -print0 | xargs -0 -P "$(nproc)" -I {} chown abc:abc {}
