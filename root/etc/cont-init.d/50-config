@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-if ! grep -q 'config-v1' /config/nginx/site-confs/default; then
+if ! grep -q 'config-v2' /config/nginx/site-confs/default; then
     cp /defaults/default /config/nginx/site-confs
 fi
 

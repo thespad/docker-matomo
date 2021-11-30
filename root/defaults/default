@@ -1,4 +1,4 @@
-#config-v1
+#config-v2
 server {
         listen 80 default_server;
 
@@ -13,10 +13,6 @@ server {
         ssl_certificate_key /config/keys/cert.key;
 
         client_max_body_size 0;
-
-        location / {
-                try_files $uri $uri/ /index.php?$query_string;
-        }
 
         location ~ ^/(index|matomo|piwik|js/index|plugins/HeatmapSessionRecording/configs)\.php$ {
                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
