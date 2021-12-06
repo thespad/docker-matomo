@@ -1,4 +1,4 @@
-FROM lscr.io/linuxserver/baseimage-alpine-nginx:3.14
+FROM ghcr.io/linuxserver/baseimage-alpine-nginx:3.15
 
 LABEL maintainer="Adam Beardwood"
 
@@ -6,17 +6,17 @@ RUN \
   apk add --update --no-cache \
     curl \
     composer \
-    php7-gd \
-    php7-dom \
-    php7-xml \
-    php7-ctype \
-    php7-pdo \
-    php7-pdo_mysql \
-    php7-mysqli \
-    php7-opcache \
-    php7-pecl-apcu \
-    php7-pecl-redis \
-    php7-tokenizer && \
+    php8-gd \
+    php8-dom \
+    php8-xml \
+    php8-ctype \
+    php8-pdo \
+    php8-pdo_mysql \
+    php8-mysqli \
+    php8-opcache \
+    php8-pecl-apcu \
+    php8-pecl-redis \
+    php8-tokenizer && \
   echo "**** install matomo ****" && \
   mkdir -p /app/matomo && \
   if [ -z ${MATOMO_RELEASE+x} ]; then \
