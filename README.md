@@ -1,19 +1,15 @@
-We bring you another container release featuring:
-
-* Regular and timely application updates
-* Easy user mappings (PGID, PUID)
-* Linuxserver.io base image with s6 overlay
-
 # [thespad/matomo](https://github.com/thespad/docker-matomo)
 
-[![GitHub Stars](https://img.shields.io/github/stars/thespad/docker-matomo.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-matomo)
-[![GitHub Release](https://img.shields.io/github/release/thespad/docker-matomo.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-matomo/releases)
-[![GitHub Package Repository](https://img.shields.io/static/v1.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=thespad&message=GitHub%20Package&logo=github)](https://github.com/thespad/docker-matomo/packages)
-[![Image Size](https://img.shields.io/docker/image-size/thespad/matomo/latest?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=Size)](#)
-[![Docker Pulls](https://img.shields.io/docker/pulls/thespad/matomo.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/thespad/matomo)
-[![Docker Stars](https://img.shields.io/docker/stars/thespad/matomo.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/thespad/matomo)
-[![License](https://img.shields.io/github/license/thespad/docker-matomo?color=94398d&logo=Github&logoColor=ffffff&style=for-the-badge)](#)
-[![Commits](https://img.shields.io/github/commits-since/thespad/docker-matomo/latest?color=94398d&include_prereleases&logo=github&style=for-the-badge)](#)
+[![GitHub Release](https://img.shields.io/github/release/thespad/docker-matomo.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-matomo/releases)
+![Commits](https://img.shields.io/github/commits-since/thespad/docker-matomo/latest?color=26689A&include_prereleases&logo=github&style=for-the-badge)
+![Image Size](https://img.shields.io/docker/image-size/thespad/matomo/latest?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=Size)
+[![Docker Pulls](https://img.shields.io/docker/pulls/thespad/matomo.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/thespad/matomo)
+[![GitHub Stars](https://img.shields.io/github/stars/thespad/docker-matomo.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-matomo)
+[![Docker Stars](https://img.shields.io/docker/stars/thespad/matomo.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/thespad/matomo)
+
+[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20update%20and%20release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Upstream%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/called-ci.yml)
+[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20base%20image%20updates.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/called-baseimage-update.yml)
+[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Build%20Image%20On%20Release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-matomo/actions/workflows/called-bakebuild.yml)
 
 [matomo](https://github.com/matomo-org/matomo/) is a powerful web analytics platform that gives you 100% data ownership
 
@@ -25,15 +21,15 @@ Simply pulling `ghcr.io/thespad/matomo` should retrieve the correct image for yo
 
 The architectures supported by this image are:
 
-| Architecture | Tag |
-| :----: | --- |
-| x86-64 | latest |
-| arm64 | latest |
-| armhf | latest |
+| Architecture | Available | Tag |
+| :----: | :----: | ---- |
+| x86-64 | ✅ | latest |
+| arm64 | ✅ | latest |
+| armhf | ✅ | latest |
 
 ## Application Setup
 
-Webui is accessible at http://SERVERIP:PORT
+Webui is accessible at `http://SERVERIP:PORT`
 
 [Enable Redis support](https://matomo.org/faq/how-to/faq_20511/)
 
