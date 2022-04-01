@@ -7,9 +7,9 @@
 [![GitHub Stars](https://img.shields.io/github/stars/thespad/docker-matomo.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github)](https://github.com/thespad/docker-matomo)
 [![Docker Stars](https://img.shields.io/docker/stars/thespad/matomo.svg?color=26689A&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/thespad/matomo)
 
-[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20update%20and%20release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Upstream%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/called-ci.yml)
-[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20base%20image%20updates.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/called-baseimage-update.yml)
-[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Build%20Image%20On%20Release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-matomo/actions/workflows/called-bakebuild.yml)
+[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20update%20and%20release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Upstream%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/call-check-and-release.yml)
+[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20base%20image%20updates.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/call-baseimage-update.yml)
+[![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Build%20Image%20On%20Release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-matomo/actions/workflows/call-build-image.yml)
 
 [matomo](https://github.com/matomo-org/matomo/) is a powerful web analytics platform that gives you 100% data ownership
 
