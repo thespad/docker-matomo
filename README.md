@@ -11,6 +11,10 @@
 [![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Check%20for%20base%20image%20updates.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Check%20For%20Baseimage%20Updates)](https://github.com/thespad/docker-matomo/actions/workflows/call-baseimage-update.yml)
 [![ci](https://img.shields.io/github/workflow/status/thespad/docker-matomo/Build%20Image%20On%20Release.svg?labelColor=555555&logoColor=ffffff&style=for-the-badge&logo=github&label=Build%20Image)](https://github.com/thespad/docker-matomo/actions/workflows/call-build-image.yml)
 
+## DEPRECATION NOTICE
+
+This image is deprecated. We will not offer support for this image and it will not be updated. We recommend switching to [the official image](https://hub.docker.com/_/matomo) instead.
+
 [matomo](https://github.com/matomo-org/matomo/) is a powerful web analytics platform that gives you 100% data ownership
 
 ## Supported Architectures
